@@ -12,6 +12,7 @@ The first function, makeVector creates a special "vector", which is really a lis
     get the value of the vector
     set the value of the mean
     get the value of the mean
+    
     makeVector  <- function(x =numeric())  {
             m   <- NULL
             set <- function(y) {
@@ -25,15 +26,13 @@ The first function, makeVector creates a special "vector", which is really a lis
                 setmean = setmean,
                 getmean = getmean)
 }               
-
-
 The following function calculates the mean of the special "vector" created with the above function. However, it first checks to see if the mean has already been calculated. If so, it gets the mean from the cache and skips the computation. Otherwise, it calculates the mean of the data and sets the value of the mean in the cache via the setmean function.
 
 cachemean <- function(x, ...) {
         m <- x$getmean()
         if(!is.null(m)) {
-                message("getting cached data")
-                return(m)
+               message("getting cached data")
+               return(m)
         }
         data <- x$get()
         m <- mean(data, ...)
@@ -56,11 +55,11 @@ For this assignment, assume that the matrix supplied is always invertible.
 
 In order to complete this assignment, you must do the following:
 
-    Fork the GitHub repository containing the stub R files at https://github.com/rdpeng/ProgrammingAssignment2 to create a copy under your own account.
-    Clone your forked GitHub repository to your computer so that you can edit the files locally on your own machine.
-    Edit the R file contained in the git repository and place your solution in that file (please do not rename the file).
-    Commit your completed R file into YOUR git repository and push your git branch to the GitHub repository under your account.
-    Submit to Coursera the URL to your GitHub repository that contains the completed R code for the assignment.
+   1.Fork the GitHub repository containing the stub R files at https://github.com/rdpeng/ProgrammingAssignment2 to create a copy under your own account.
+   2.Clone your forked GitHub repository to your computer so that you can edit the files locally on your own machine.
+   3.Edit the R file contained in the git repository and place your solution in that file (please do not rename the file).
+   4.Commit your completed R file into YOUR git repository and push your git branch to the GitHub repository under your account.
+   5.Submit to Coursera the URL to your GitHub repository that contains the completed R code for the assignment.
 
 Grading
 
