@@ -30,7 +30,7 @@ The following function calculates the mean of the special "vector" created with 
 
 cachemean <- function(x, ...) {
         m <- x$getmean()
-        if(!is.null(m)) [
+        if(!is.null(m)) {
               message("getting cached data")
               return(m)
         }
